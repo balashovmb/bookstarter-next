@@ -1,10 +1,12 @@
 import React from 'react';
+import Link from 'next/link';
 
 const SimilarBook = React.memo(({ book, removeFromSimilarBook }) => {
   const {
     Cover,
     Title,
-    Authors
+    Authors,
+    Id
   } = book;
 
   return (
@@ -13,7 +15,7 @@ const SimilarBook = React.memo(({ book, removeFromSimilarBook }) => {
         <img src={Cover} alt={Title} style={styles.image}></img>
       </div>
       <div style={styles.textContainer}>
-        <div>{Title}</div>
+        <Link href={`/books/${Id}`}><a>{Title}</a></Link>
         <div>{Authors}</div>
         <button onClick={() => removeFromSimilarBook(book.Id)}>Убрать</button>
       </div>

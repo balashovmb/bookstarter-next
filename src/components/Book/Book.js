@@ -7,7 +7,6 @@ import QuestionForm from './QuestionForm';
 import AuthorsString from '../Author/AuthorsString';
 import PriceInputContainer from './PriceInputContainer';
 import SimilarBooksContainer from './SimilarBooksContainer';
-import { fetchData } from '../../utils/airtable';
 
 const Book = (props) => {
   if (!props.book) {

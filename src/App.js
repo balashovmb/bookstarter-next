@@ -14,7 +14,7 @@ class App extends React.Component {
         <h3>Подписаться на книгу</h3>
         <BookContainer {...this.props} />
         <Footer />
-        <ToTheTopButton/>
+        <ToTheTopButton />
       </>
     )
   }
